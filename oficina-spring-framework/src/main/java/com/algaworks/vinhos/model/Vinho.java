@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.NumberFormat;
+
 @Entity
 public class Vinho {
 	
@@ -48,6 +50,7 @@ public class Vinho {
 		return valor;
 	}
 
+	@NumberFormat(pattern = "#,##0.00") // Para converter o valor no input em BigDecimal
 	public void setValor(BigDecimal valor) {
 		this.valor = valor;
 	}
