@@ -12,7 +12,7 @@ import com.algaworks.vinhos.model.Vinho;
 @RequestMapping("/vinhos")
 public class VinhosController {
 	
-	@GetMapping("/novo")
+	@GetMapping("/novo" )
 	public ModelAndView novo() {
 		ModelAndView mv = new ModelAndView("/vinhos/Cadastro-vinho");
 		mv.addObject("vinho", new Vinho());
